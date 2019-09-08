@@ -86,7 +86,7 @@ const TextResize = ({
 
   return (
     <div ref={parentRef} className={`textResize ${className}`}>
-      <div className="innerWrapper" style={{ fontSize: `${fontSize}px`, lineHeight: `${fontSize}px` }} ref={childRef}>
+      <div className="innerWrapper" style={{ fontSize: `${fontSize}px`, lineHeight: `${fontSize + 4}px` }} ref={childRef}>
         {children}
       </div>
     </div>
