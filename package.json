@@ -30,7 +30,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "typescript": "tsc -p tsconfigPublish.json && XCOPY /S /y .\\src\\TextResize\\*.css .\\lib",
-    "prepublishOnly": "SET \"NODE_ENV=production\" && yarn typescript && if exist dist rmdir /s /q dist && mkdir dist && npx babel lib --out-dir dist --copy-files"
+    "copy-files": "if exist dist rmdir /s /q dist && mkdir dist",
+    "babel": "SET \"NODE_ENV=production\" && npx babel ./lib --out-dir dist --copy-files",
+    "prepublishOnly": "npm-run-all typescript copy-files babel"
   },
   "eslintConfig": {
     "extends": "react-app"

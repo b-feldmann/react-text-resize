@@ -11,8 +11,8 @@
     "esModuleInterop": true,
     "lib": [ "es2015", "dom" ]
   },
-  "files": [
-    "src/TextResize/index.ts"
+  "include": [
+    "src/TextResize/*"
   ],
   "exclude": [
     "node_modules"
