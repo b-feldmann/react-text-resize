@@ -1,6 +1,6 @@
 {
   "name": "react-resize-text",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "license": "MIT",
   "main": "dist/index.js",
@@ -50,5 +50,8 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
