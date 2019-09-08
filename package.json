@@ -1,10 +1,9 @@
 {
   "name": "react-resize-text",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "license": "MIT",
   "main": "dist/index.js",
-  "module": "dist/index.js",
   "babel": {
     "presets": [
       "@babel/react"
