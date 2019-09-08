@@ -1,5 +1,5 @@
 {
-  "name": "react-text-resize",
+  "name": "react-resize-text",
   "version": "0.1.0",
   "private": false,
   "license": "MIT",
@@ -27,7 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "publish:npm": "SET NODE_ENV=production && if exist dist rmdir /s /q dist && mkdir dist && npx babel src/TextResize --out-dir dist --copy-files"
+    "publish:npm": "SET \"NODE_ENV=production\" && tsc -p tsconfigPublish.json && if exist dist rmdir /s /q dist && mkdir dist && npx babel lib --out-dir dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"

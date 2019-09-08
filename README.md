@@ -1,5 +1,7 @@
 Component that resizes font-size of children to fit the parent container.
 
+> _Supports Typescript_ 
+ 
 #### Examples
 
 ```

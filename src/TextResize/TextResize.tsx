@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import TextResizeProps from './TextResizeProps';
 
-import styles from './TextResize.module.scss';
+import './TextResize.css';
 
 const THRESHOLD = 0.01;
 
@@ -85,8 +85,8 @@ const TextResize = ({
   }, [fontSize, active, minFontSize, maxFontSize, currentMax, lastStep]);
 
   return (
-    <div ref={parentRef} className={`${styles.textResize} ${className}`}>
-      <div className={styles.innerWrapper} style={{ fontSize: `${fontSize}px` }} ref={childRef}>
+    <div ref={parentRef} className={`textResize ${className}`}>
+      <div className="innerWrapper" style={{ fontSize: `${fontSize}px` }} ref={childRef}>
         {children}
       </div>
     </div>
