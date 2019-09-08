@@ -1,12 +1,14 @@
 {
   "name": "react-resize-text",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": false,
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "babel": {
-    "presets": [ "@babel/react" ]
+    "presets": [
+      "@babel/react"
+    ]
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "publish:npm": "SET \"NODE_ENV=production\" && tsc -p tsconfigPublish.json && if exist dist rmdir /s /q dist && mkdir dist && npx babel lib --out-dir dist --copy-files"
+    "typescript": "tsc -p tsconfigPublish.json && XCOPY /S /y .\\src\\TextResize\\*.css .\\lib",
+    "prepublishOnly": "SET \"NODE_ENV=production\" && yarn typescript && if exist dist rmdir /s /q dist && mkdir dist && npx babel lib --out-dir dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
